@@ -1,4 +1,5 @@
 import os
+import json
 import unittest
 import xml.etree.ElementTree as ET
 
@@ -186,6 +187,22 @@ class test_robot_output_parser(unittest.TestCase):
         }
         self.assertEqual(keyword_info, expect_keyword_info)
 
+    def test_parse_output_and_save_to(self):
+        mock_robot_output_file_path = os.path.join(
+            self.current_dir, 'fixture', 'single_keyword.xml')
+        rop = RobotOutputParser()
+        rop.set_robot_output_file(mock_robot_output_file_path)
+        rop.parse_output_and_save_to('keywords.json')
+        expect_keyword_info = {
+            'name': 'Login',
+            'status': 'PASS',
+            'starttime': '20190423 13:11:24.102',
+            'endtime': '20190423 13:11:27.807'
+        }
+        with open('keywords.json', 'r') as f:
+            keywords = json.load(f)
+            self.assertEqual(keywords, expect_keyword_info)
+            os.remove('keywords.json')
 
 class RobotOutputParser():
     def __init__(self):
@@ -214,7 +231,11 @@ class RobotOutputParser():
             kw_info['keywords'] = [self.parse_keyword(
                 kw_child) for kw_child in kw_children]
         return kw_info
-
+    
+    def parse_output_and_save_to(self, target_path):
+        keywords = self.parse_output()
+        with open(target_path, 'w') as f:
+            json.dump(keywords, f)
 
 if __name__ == "__main__":
     unittest.main()
