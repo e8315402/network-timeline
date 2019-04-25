@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kw name="Logoff" library="DCTLibrary" type="teardown">
+	<doc>Close Browser asynchronously</doc>
+	<msg timestamp="20190423 13:11:35.694" level="DEBUG">POST http://127.0.0.1:5575/session/8b14ffed74cf41121aefe8476fc79f69/log {"type": "performance", "sessionId": "8b14ffed74cf41121aefe8476fc79f69"}</msg>
+	<msg timestamp="20190423 13:11:35.741" level="DEBUG">Finished Request</msg>
+	<msg timestamp="20190423 13:11:35.900" level="DEBUG">POST http://127.0.0.1:5575/session/8b14ffed74cf41121aefe8476fc79f69/log {"type": "browser", "sessionId": "8b14ffed74cf41121aefe8476fc79f69"}</msg>
+	<msg timestamp="20190423 13:11:35.902" level="DEBUG">Finished Request</msg>
+	<msg timestamp="20190423 13:11:35.912" level="TRACE">Arguments: [  ]</msg>
+	<kw name="Close Browser" library="SeleniumLibrary">
+		<doc>Closes the current browser.</doc>
+		<msg timestamp="20190423 13:11:35.912" level="TRACE">Arguments: [  ]</msg>
+		<msg timestamp="20190423 13:11:35.912" level="DEBUG">Closing browser with session id 8b14ffed74cf41121aefe8476fc79f69.</msg>
+		<msg timestamp="20190423 13:11:35.913" level="DEBUG">DELETE http://127.0.0.1:5575/session/8b14ffed74cf41121aefe8476fc79f69 {"sessionId": "8b14ffed74cf41121aefe8476fc79f69"}</msg>
+		<msg timestamp="20190423 13:11:35.938" level="DEBUG">Finished Request</msg>
+		<msg timestamp="20190423 13:11:37.968" level="TRACE">Return: None</msg>
+		<status status="PASS" starttime="20190423 13:11:35.912" endtime="20190423 13:11:37.968"></status>
+	</kw>
+	<msg timestamp="20190423 13:11:37.970" level="TRACE">Return: None</msg>
+	<status status="PASS" starttime="20190423 13:11:35.693" endtime="20190423 13:11:37.970"></status>
+</kw>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kw name="Login" library="SeleniumLibrary">
+	<doc>Creates an instance of Selenium WebDriver.</doc>
+	<arguments>
+		<arg>${browser.title()}</arg>
+		<arg>${browser}</arg>
+		<arg>desired_capabilities=${capabilities}</arg>
+		<arg>options=${options}</arg>
+	</arguments>
+	<msg timestamp="20190423 13:11:24.102" level="TRACE">Arguments: [ 'Chrome' | 'chrome' | desired_capabilities={'acceptInsecureCerts': True, 'acceptSslCerts': True, 'browserName': 'chrome', 'loggingPrefs': {'browser': 'ALL', 'performance': 'ALL'}, 'platform': 'ANY', 'version': ''} | options=&lt;selenium.webdriver.chrome.options.Options object at 0x03554D70&gt; ]</msg>
+	<msg timestamp="20190423 13:11:24.102" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+	<msg timestamp="20190423 13:11:25.074" level="DEBUG">POST http://127.0.0.1:5575/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "acceptInsecureCerts": true, "goog:chromeOptions": {"extensions": [], "args": ["--headless", "--window-size=1920,1080", "--no-sandbox", "--disable-gpu", "--ignore-certificate-errors", "--allow-running-insecure-content", "--log-level=3"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "acceptSslCerts": true, "acceptInsecureCerts": true, "loggingPrefs": {"performance": "ALL", "browser": "ALL"}, "goog:chromeOptions": {"extensions": [], "args": ["--headless", "--window-size=1920,1080", "--no-sandbox", "--disable-gpu", "--ignore-certificate-errors", "--allow-running-insecure-content", "--log-level=3"]}}}</msg>
+	<msg timestamp="20190423 13:11:27.806" level="DEBUG">Finished Request</msg>
+	<msg timestamp="20190423 13:11:27.806" level="DEBUG">Created Chrome WebDriver instance with session id 8b14ffed74cf41121aefe8476fc79f69.</msg>
+	<msg timestamp="20190423 13:11:27.806" level="TRACE">Return: 1</msg>
+	<status status="PASS" starttime="20190423 13:11:24.102" endtime="20190423 13:11:27.807"></status>
+</kw>
